@@ -74,3 +74,8 @@ delay 1
 -- Decimal is OK
 delay 0.5
 ```
+
+
+## Resources
+
+https://en.wikibooks.org/wiki/AppleScript_Programming
