@@ -64,3 +64,13 @@ tell application (path to frontmost application as text)
     ...
 end tell
 ```
+
+### Delay for seconds
+
+```
+-- Delay for 1s
+delay 1
+
+-- Decimal is OK
+delay 0.5
+```
