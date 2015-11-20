@@ -8,7 +8,7 @@ Notes & code pieces recorded during my exploration to AppleScript.
 
 ### Strike keys in any situation
 
-```
+```applescript
 tell application "System Events"
     -- Strike a return key
     keystroke return
