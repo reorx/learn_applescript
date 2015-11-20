@@ -54,7 +54,8 @@ display dialog myvar
 ### Url encode a variable
 
 ```applescript
-set encoded to do shell script "python -c 'import urllib; print urllib.quote(\"" & myvar & "\")'"
+set cmd to "python -c 'import urllib, sys; print urllib.quote(sys.argv[1])'" & " " & quoted form of selected
+set encoded to do shell script cmd
 ```
 
 ### Tell current application

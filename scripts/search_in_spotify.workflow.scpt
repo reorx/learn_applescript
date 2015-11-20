@@ -1,8 +1,17 @@
 on run {input, parameters}
-	set selected to input
+	-- display alert (class of input)
+	-- Since input is a list, we should convert it to string before processing
+	repeat with ii in input
+		set selected to ii
+	end repeat
+	-- display alert (class of selected)
+	-- display alert selected
 
 	-- Encode selected
-	set encoded to do shell script "python -c 'import urllib; print urllib.quote(\"" & selected & "\")'"
+	set cmd to "python -c 'import urllib, sys; print urllib.quote(sys.argv[1])'" & " " & quoted form of selected
+	-- display alert cmd
+	set encoded to do shell script cmd
+	-- display alert encoded
 
 	-- Form the search url
 	set prefix to "spotify:search:"

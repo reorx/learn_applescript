@@ -12,7 +12,9 @@ if selected as string is equal to "" then
 end if
 
 -- Encode selected
-set selected_encoded to do shell script "python -c 'import urllib; print urllib.quote(\"" & selected & "\")'"
+set cmd to "python -c 'import urllib, sys; print urllib.quote(sys.argv[1])'" & " " & quoted form of selected
+-- display alert cmd
+set selected_encoded to do shell script cmd
 
 -- Form the search url
 set prefix to "spotify:search:"
