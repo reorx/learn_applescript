@@ -76,6 +76,22 @@ delay 1
 delay 0.5
 ```
 
+### Copy image to clipboard
+
+```applescript
+set the clipboard to (read "image.png" as TIFF picture)
+```
+
+### Concat strings
+
+```applescript
+set a to "Al "
+set b to "was "
+set c to "here."
+set myVar to a & b & c
+display dialog myVar
+```
+
 
 ## Resources
 
